@@ -25,3 +25,7 @@
 [submodule "nintcha-front"]
 	path = nintcha-front
 	url = git@github.com:Nin-tcha/client-frontend.git
+[submodule "cdn"]
+	path = cdn
+	url = git@github.com:Nin-tcha/cdn.git
+	branch = main
