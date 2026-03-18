@@ -1,0 +1,27 @@
+[submodule "services/common"]
+	path = services/common
+	url = git@github.com:Nin-tcha/common.git
+[submodule "services/auth-service"]
+	path = services/auth-service
+	url = git@github.com:Nin-tcha/auth-service.git
+[submodule "services/fight-service"]
+	path = services/fight-service
+	url = git@github.com:Nin-tcha/fight-service.git
+[submodule "services/invocation-service"]
+	path = services/invocation-service
+	url = git@github.com:Nin-tcha/invocation-service.git
+[submodule "services/monster-service"]
+	path = services/monster-service
+	url = git@github.com:Nin-tcha/monster-service.git
+[submodule "services/player-service"]
+	path = services/player-service
+	url = git@github.com:Nin-tcha/player-service.git
+[submodule "services/stamina-service"]
+	path = services/stamina-service
+	url = git@github.com:Nin-tcha/stamina-service.git
+[submodule "services/e2e-tests"]
+	path = services/e2e-tests
+	url = git@github.com:Nin-tcha/e2e-tests.git
+[submodule "nintcha-front"]
+	path = nintcha-front
+	url = git@github.com:Nin-tcha/client-frontend.git
