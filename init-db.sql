@@ -1,0 +1,6 @@
+CREATE DATABASE auth_db;
+CREATE DATABASE player_db;
+CREATE DATABASE monster_db;
+CREATE DATABASE invocation_db;
+CREATE DATABASE fight_db;
+CREATE DATABASE stamina_db;
