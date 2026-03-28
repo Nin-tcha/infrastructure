@@ -2,7 +2,7 @@ build:
 	mvn clean install -DskipTests
 
 infra-up:
-	docker compose up -d traefik postgres kafka kafka-ui
+	docker compose up -d postgres kafka kafka-ui
 
 infra-down:
 	docker compose down
