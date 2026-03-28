@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0" version="29.6.6">
+  <diagram id="rQf0c84xFk35zH8WFO6K" name="Page-1">
+    <mxGraphModel dx="1350" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-100" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1;" value="Flux d&#39;authentification" vertex="1">
+          <mxGeometry height="35" width="760" x="1040" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;" value="Client&#xa;(Next.js)" vertex="1">
+          <mxGeometry height="60" width="120" x="880" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-102" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" value="Service Quarkus&#xa;(ex: PlayerResource)" vertex="1">
+          <mxGeometry height="60" width="160" x="1090" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-103" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" value="AuthClient&#xa;(services/common)" vertex="1">
+          <mxGeometry height="60" width="160" x="1330" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-104" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="auth-service&#xa;(:8081)" vertex="1">
+          <mxGeometry height="60" width="140" x="1580" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-105" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;" value="auth_db&#xa;(PostgreSQL)" vertex="1">
+          <mxGeometry height="70" width="120" x="1830" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-106" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#6c8ebf;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="440" as="sourcePoint" />
+            <mxPoint x="940" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-107" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#82b366;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="440" as="sourcePoint" />
+            <mxPoint x="1170" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-108" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#d6b656;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1410" y="440" as="sourcePoint" />
+            <mxPoint x="1410" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-109" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#b85450;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1650" y="440" as="sourcePoint" />
+            <mxPoint x="1650" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-110" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9673a6;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1890" y="445" as="sourcePoint" />
+            <mxPoint x="1890" y="1130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-111" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;fontSize=10;align=center;" value="1. HTTP Request + Authorization: &lt;token&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="495" as="sourcePoint" />
+            <mxPoint x="1170" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-112" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;fontSize=10;align=center;" value="2. authClient.validate(Map.of(&quot;token&quot;, token))&#xa;[@Inject @RestClient AuthClient]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="570" as="sourcePoint" />
+            <mxPoint x="1410" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-113" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;fontSize=10;align=center;strokeColor=#b85450;" value="3. POST /auth/validate  {&quot;token&quot;: &quot;...&quot;}&#xa;[HTTP REST — synchrone, bloquant]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1410" y="645" as="sourcePoint" />
+            <mxPoint x="1650" y="645" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-114" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;fontSize=10;align=center;strokeColor=#9673a6;" value="4. SELECT * FROM auth_token&#xa;WHERE token = ?">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1650" y="720" as="sourcePoint" />
+            <mxPoint x="1890" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-115" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;fontSize=10;align=center;strokeColor=#9673a6;dashed=1;" value="5. AuthToken {username, expiresAt, role}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1890" y="780" as="sourcePoint" />
+            <mxPoint x="1650" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-116" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;fontSize=10;align=center;strokeColor=#9673a6;" value="6. UPDATE expiresAt = now() + 1h">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1650" y="840" as="sourcePoint" />
+            <mxPoint x="1890" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-117" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;fontSize=10;align=center;strokeColor=#b85450;dashed=1;" value="7. 200 OK — {&quot;username&quot;: &quot;alice&quot;, &quot;role&quot;: &quot;USER&quot;}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1650" y="910" as="sourcePoint" />
+            <mxPoint x="1410" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-118" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;fontSize=10;align=center;dashed=1;" value="8. Map&lt;String,String&gt; {username, role}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1410" y="975" as="sourcePoint" />
+            <mxPoint x="1170" y="975" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-119" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;fontSize=10;align=center;dashed=1;" value="9. 200 OK — réponse métier">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="1050" as="sourcePoint" />
+            <mxPoint x="940" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-120" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=10;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;spacingLeft=8;" value="Si token expiré / inconnu :&lt;br&gt;auth-service -&amp;gt; 401 Unauthorized&lt;br&gt;&lt;br&gt;L&#39;appel AuthClient lève une exception&lt;br&gt;-&amp;gt; le service retourne 401 au client" vertex="1">
+          <mxGeometry height="80" width="250" x="1900" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-122" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=8;" value="Configuration (application.properties) :&#xa;quarkus.rest-client.auth-api.url=&#xa;  http://auth-service:8081" vertex="1">
+          <mxGeometry height="65" width="270" x="1330" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-123" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=2;" value="Bibliothèque partagée — importée par chaque service via Maven (common)" vertex="1">
+          <mxGeometry height="30" width="330" x="1330" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-124" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=8;" value="Format du token (avant chiffrement) :&lt;br&gt;  alice-2026/03/28-14:30:00&lt;br&gt;-&amp;gt; AES-256 ECB + Base64 encode&lt;br&gt;-&amp;gt; token opaque (lookup en DB, pas déchiffré)" vertex="1">
+          <mxGeometry height="80" width="270" x="609" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-125" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=8;" value="Pour les endpoints admin :&lt;br&gt;authClient.validateAdmin(token)&lt;br&gt;-&amp;gt; retourne 403 si role != ADMIN" vertex="1">
+          <mxGeometry height="65" width="210" x="670" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="f6ArJzlGSLcvDaGx-90e-126" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;align=left;spacingLeft=8;" value="Les 5 services qui utilisent AuthClient :&#xa;• player-service (:8082)&#xa;• monster-service (:8083)&#xa;• invocation-service (:8084)&#xa;• fight-service (:8085)&#xa;• stamina-service (:8086)" vertex="1">
+          <mxGeometry height="110" width="200" x="680" y="940" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

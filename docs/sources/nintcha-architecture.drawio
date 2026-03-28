@@ -1,0 +1,573 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0" version="29.6.4" pages="2">
+  <diagram name="System Topology" id="topology">
+    <mxGraphModel dx="935" dy="449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontStyle=1;fontColor=#999999;" value="CLIENT" vertex="1">
+          <mxGeometry height="20" width="60" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontStyle=1;fontColor=#999999;" value="GATEWAY" vertex="1">
+          <mxGeometry height="20" width="70" x="10" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="z3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontStyle=1;fontColor=#999999;" value="SERVICES" vertex="1">
+          <mxGeometry height="20" width="70" x="10" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="z4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontStyle=1;fontColor=#999999;" value="DATA" vertex="1">
+          <mxGeometry height="20" width="70" x="10" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="z5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontStyle=1;fontColor=#999999;" value="INFRA" vertex="1">
+          <mxGeometry height="20" width="70" x="10" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;Browser&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="767" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" value="&lt;b&gt;Next.js Frontend&lt;/b&gt;&lt;br&gt;nintcha-front · :3000&lt;br&gt;&lt;div&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;NextJS 16.1.6&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="300" x="677" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;fontColor=#333333;" value="&lt;b&gt;nginx&lt;/b&gt; · :80&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;reverse proxy · path-based routing&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="300" x="677" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;b&gt;auth-service&lt;/b&gt;&lt;br&gt;:8081&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;Token, USER / ADMIN roles&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="50" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="&lt;b&gt;player-service&lt;/b&gt;&lt;br&gt;:8082&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;Profiles, Inventory, Teams, Player XP&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="280" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" value="&lt;b&gt;monster-service&lt;/b&gt;&lt;br&gt;:8083&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;Instances, Stats, Skill upgrades&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="510" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" value="&lt;b&gt;invocation-service&lt;/b&gt;&lt;br&gt;:8084&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;Gacha pulls&lt;br&gt;Weighted rarity RNG&lt;br&gt;(Common, Rare, Epic, Legendary &amp;amp; Mythic)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="740" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="&lt;b&gt;fight-service&lt;/b&gt;&lt;br&gt;:8085&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;Battle Engine, Elo, Leaderboard&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="970" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" value="&lt;b&gt;stamina-service&lt;/b&gt;&lt;br&gt;:8086&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;Pool, Regen +1/min&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="190" x="1200" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="auth_db" vertex="1">
+          <mxGeometry height="55" width="75" x="70" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="player_db" vertex="1">
+          <mxGeometry height="55" width="75" x="300" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="t13" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" value="monster_db" vertex="1">
+          <mxGeometry height="55" width="75" x="530" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="t14" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" value="invocation_db" vertex="1">
+          <mxGeometry height="55" width="75" x="760" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="t15" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="fight_db" vertex="1">
+          <mxGeometry height="55" width="75" x="990" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="t16" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" value="stamina_db" vertex="1">
+          <mxGeometry height="55" width="75" x="1220" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="t17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;" value="&lt;b&gt;PostgreSQL&lt;/b&gt; :5432&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;gatcha / gatchapassword&lt;br&gt;6 isolated databases&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="240" x="577" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="t18" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="&lt;b&gt;Apache Kafka&lt;/b&gt; :9092&lt;br&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 9px;&quot;&gt;9 topics, async event bus&lt;/font&gt;" vertex="1">
+          <mxGeometry height="65" width="280" x="557" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="t19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=9;" value="&lt;b&gt;Kafka UI&lt;/b&gt; :8090" vertex="1">
+          <mxGeometry height="35" width="120" x="900" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="z_common" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=9;fontStyle=1;fontColor=#999999;" value="SHARED LIB" vertex="1">
+          <mxGeometry height="20" width="100" x="1450" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="t20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=9;fontColor=#333333;dashed=1;align=left;spacingLeft=5;verticalAlign=top;" value="&lt;b&gt;common&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;font color=&quot;#888888&quot; style=&quot;font-size: 8px;&quot;&gt;shared Maven module&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#888888&quot; style=&quot;font-size: 8px;&quot;&gt;all 6 services depend on this (+ some libs)&lt;/font&gt;&lt;/div&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;AuthClient&lt;/b&gt;&lt;br&gt;  validate() · validateAdmin()&lt;br&gt;&lt;b&gt;Enums&lt;/b&gt;&lt;br&gt;  Element (FEU/EAU/VENT/TERRE)&lt;br&gt;  UserRole (USER/ADMIN)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="1450" y="324" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=10;" value="Legend" vertex="1">
+          <mxGeometry height="20" width="80" x="50" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333333;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="760" as="sourcePoint" />
+            <mxPoint x="130" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg2l" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;" value="HTTP (sync)" vertex="1">
+          <mxGeometry height="20" width="100" x="140" y="752" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#b85450;dashed=1;startArrow=block;startFill=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="790" as="sourcePoint" />
+            <mxPoint x="130" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg3l" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;" value="Kafka (async)" vertex="1">
+          <mxGeometry height="20" width="100" x="140" y="782" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="t2" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;" target="t3" value="HTTP :3000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="t3" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;" target="t4" value="server-side authFetch()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="t5" value="/auth">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="244" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;" target="t6" value="/players">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;" target="t7" value="/monsters">
+          <mxGeometry relative="1" x="0.3197" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="610" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;" target="t8" value="/invocations">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="330" />
+              <mxPoint x="840" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;" target="t9" value="/fight">
+          <mxGeometry relative="1" x="-0.5169" y="3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1065" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;" target="t10" value="/stamina">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1295" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="t5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;startFill=0;endFill=0;strokeColor=#d6b656;" target="t11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="108" y="440" />
+              <mxPoint x="108" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="t6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;startFill=0;endFill=0;strokeColor=#82b366;" target="t12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="480" />
+              <mxPoint x="340" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="t7" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;startFill=0;endFill=0;strokeColor=#d79b00;" target="t13" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="470" />
+              <mxPoint x="570" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="t8" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;startFill=0;endFill=0;strokeColor=#9673a6;" target="t14" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="440" />
+              <mxPoint x="798" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="t9" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;startFill=0;endFill=0;strokeColor=#b85450;" target="t15" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1028" y="440" />
+              <mxPoint x="1028" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="t10" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;startArrow=ERone;startFill=0;endFill=0;strokeColor=#6c8ebf;" target="t16" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="480" />
+              <mxPoint x="1260" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="t11" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;dashed=1;strokeColor=#cccccc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="t17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="108" y="590" />
+              <mxPoint x="670" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="t12" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;dashed=1;strokeColor=#cccccc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="t17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="338" y="580" />
+              <mxPoint x="680" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="t13" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;dashed=1;strokeColor=#cccccc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="t17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="568" y="570" />
+              <mxPoint x="690" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="t14" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;dashed=1;strokeColor=#cccccc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="t17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="798" y="580" />
+              <mxPoint x="700" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="t15" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;dashed=1;strokeColor=#cccccc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="t17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1028" y="590" />
+              <mxPoint x="710" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="t16" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;dashed=1;strokeColor=#cccccc;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="t17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1258" y="600" />
+              <mxPoint x="720" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="t19" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;dashed=1;strokeColor=#666666;endArrow=open;" target="t18" value="monitors">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ek1" edge="1" parent="1" source="t8" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#9673a6;fontSize=8;endArrow=block;startArrow=block;startFill=0;endFill=1;align=left;" target="t18" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="690" />
+              <mxPoint x="700" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ek2" edge="1" parent="1" source="t9" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#b85450;fontSize=8;endArrow=block;startArrow=block;startFill=0;endFill=1;align=left;" target="t18" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="700" />
+              <mxPoint x="710" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ek3" edge="1" parent="1" source="t10" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#6c8ebf;fontSize=8;endArrow=block;startArrow=block;startFill=0;endFill=1;align=left;" target="t18" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1310" y="710" />
+              <mxPoint x="720" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ek4" edge="1" parent="1" source="t7" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#d79b00;fontSize=8;endArrow=block;startArrow=block;startFill=0;endFill=1;align=right;" target="t18" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="690" />
+              <mxPoint x="690" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ek5" edge="1" parent="1" source="t6" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#82b366;fontSize=8;endArrow=block;startArrow=block;startFill=0;endFill=1;align=right;" target="t18" value="">
+          <mxGeometry relative="1" x="-0.0247" y="-35" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="700" />
+              <mxPoint x="680" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ec1" edge="1" parent="1" source="t5" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#bbbbbb;strokeWidth=1;endArrow=open;endFill=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.005;entryY=0.132;entryDx=0;entryDy=0;entryPerimeter=0;" target="t20" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="340" />
+              <mxPoint x="845" y="340" />
+              <mxPoint x="845" y="339" />
+            </Array>
+            <mxPoint x="210" y="340" as="sourcePoint" />
+            <mxPoint x="1420" y="306" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ec2" edge="1" parent="1" source="t6" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#bbbbbb;strokeWidth=1;endArrow=open;endFill=0;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0.002;entryY=0.131;entryDx=0;entryDy=0;entryPerimeter=0;" target="t20" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="340" />
+              <mxPoint x="960" y="340" />
+              <mxPoint x="960" y="339" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ec3" edge="1" parent="1" source="t7" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#bbbbbb;strokeWidth=1;endArrow=open;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.002;entryY=0.135;entryDx=0;entryDy=0;fontSize=8;fontColor=#aaaaaa;entryPerimeter=0;" target="t20" value=" ">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="340" />
+              <mxPoint x="1075" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ec4" edge="1" parent="1" source="t8" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#bbbbbb;strokeWidth=1;endArrow=open;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.131;entryDx=0;entryDy=0;entryPerimeter=0;" target="t20" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="340" />
+              <mxPoint x="1190" y="340" />
+              <mxPoint x="1190" y="339" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ec5" edge="1" parent="1" style="edgeStyle=elbowEdgeStyle;html=1;dashed=1;strokeColor=#bbbbbb;strokeWidth=1;endArrow=open;endFill=0;exitX=0.516;exitY=0.031;exitDx=0;exitDy=0;entryX=0.003;entryY=0.131;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;rounded=0;curved=0;" target="t20" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1069.04" y="340" as="sourcePoint" />
+            <mxPoint x="1450" y="326.34000000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ec6" edge="1" parent="1" source="t10" style="edgeStyle=elbowEdgeStyle;html=1;dashed=1;strokeColor=#bbbbbb;strokeWidth=1;endArrow=open;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.132;entryDx=0;entryDy=0;entryPerimeter=0;" target="t20" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1390" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4" edge="1" parent="1" style="endArrow=open;endFill=0;html=1;strokeColor=#bbbbbb;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="50" y="820" as="sourcePoint" />
+            <mxPoint x="130" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4l" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;" value="«uses» (compile dep)" vertex="1">
+          <mxGeometry height="20" width="140" x="140" y="812" as="geometry" />
+        </mxCell>
+        <mxCell id="wo6XS7_CBlp4-16lbUzI-3" edge="1" parent="1" source="t9" style="edgeStyle=elbowEdgeStyle;html=1;dashed=1;strokeColor=#bbbbbb;strokeWidth=1;endArrow=open;endFill=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.003;entryY=0.131;entryDx=0;entryDy=0;entryPerimeter=0;rounded=1;curved=0;" target="t20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Kafka Event Flows" id="kafka-flows">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- ══════════════════════════════════ -->
+        <!--  FLOW A — Invocation (Gacha Pull)  -->
+        <!-- ══════════════════════════════════ -->
+        <mxCell id="fa0" value="A · Invocation Saga (Gacha Pull)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="400" height="25" as="geometry" />
+        </mxCell>
+        <!-- Swimlane headers -->
+        <mxCell id="fa_user" value="User" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="130" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fa_inv" value="invocation-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="60" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fa_sta" value="stamina-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="60" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fa_mon" value="monster-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="60" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fa_pla" value="player-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="870" y="60" width="160" height="35" as="geometry" />
+        </mxCell>
+        <!-- Step 1: User → invocation POST -->
+        <mxCell id="fa1" value="POST /invocations" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#333333;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="140" as="sourcePoint" />
+            <mxPoint x="210" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fa1r" value="202 ACCEPTED" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=open;strokeColor=#333333;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="155" as="sourcePoint" />
+            <mxPoint x="95" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fa1n" value="1. Create Invocation(PENDING_STAMINA)" style="text;html=1;strokeColor=none;fillColor=#e1d5e7;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="130" width="230" height="30" as="geometry" />
+        </mxCell>
+        <!-- Step 2: invocation → stamina (Kafka) -->
+        <mxCell id="fa2" value="[Kafka] stamina.consume-requests" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#9673a6;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="195" as="sourcePoint" />
+            <mxPoint x="430" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fa2n" value="2. Emit StaminaConsumeRequest(20, &quot;INVOCATION&quot;)" style="text;html=1;strokeColor=none;fillColor=#e1d5e7;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="185" width="210" height="30" as="geometry" />
+        </mxCell>
+        <!-- Step 3: stamina → invocation (Kafka) -->
+        <mxCell id="fa3" value="[Kafka] stamina.consume-results" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#6c8ebf;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="250" as="sourcePoint" />
+            <mxPoint x="370" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fa3n" value="3. Deduct 20 stamina · success=true" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="435" y="240" width="190" height="30" as="geometry" />
+        </mxCell>
+        <!-- Step 4: invocation → monster (Kafka) -->
+        <mxCell id="fa4" value="[Kafka] invocations.requested" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#9673a6;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="305" as="sourcePoint" />
+            <mxPoint x="650" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fa4n" value="4. Run gacha RNG · emit InvocationTask" style="text;html=1;strokeColor=none;fillColor=#e1d5e7;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="295" width="210" height="30" as="geometry" />
+        </mxCell>
+        <!-- Step 5: monster → player (Kafka) -->
+        <mxCell id="fa5" value="[Kafka] monsters.created" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#d79b00;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="360" as="sourcePoint" />
+            <mxPoint x="870" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fa5n" value="5. Create Monster instance from InvocationTask" style="text;html=1;strokeColor=none;fillColor=#ffe6cc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="655" y="350" width="210" height="30" as="geometry" />
+        </mxCell>
+        <!-- Step 6: player → invocation (Kafka) -->
+        <mxCell id="fa6" value="[Kafka] invocations.completed" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#82b366;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="870" y="415" as="sourcePoint" />
+            <mxPoint x="370" y="415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fa6n_ok" value="6a. Inventory OK → add monster, status=COMPLETED" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="875" y="405" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fa6n_ko" value="6b. Inventory FULL → auto-release, status=FAILED" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="875" y="438" width="250" height="30" as="geometry" />
+        </mxCell>
+        <!-- Step 7: poll -->
+        <mxCell id="fa7" value="GET /invocations/{id} (poll until ≠ PENDING)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#333333;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="480" as="sourcePoint" />
+            <mxPoint x="210" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <!-- Separator -->
+        <mxCell id="sep" value="" style="endArrow=none;html=1;strokeColor=#cccccc;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="530" as="sourcePoint" />
+            <mxPoint x="1180" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <!-- ══════════════════════════════════ -->
+        <!--  FLOW B — Fight                    -->
+        <!-- ══════════════════════════════════ -->
+        <mxCell id="fb0" value="B · Fight Saga" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="30" y="545" width="300" height="25" as="geometry" />
+        </mxCell>
+        <!-- Swimlane headers (fight flow) -->
+        <mxCell id="fb_user" value="User" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="580" width="130" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fb_fig" value="fight-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="580" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fb_sta" value="stamina-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="580" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fb_pla" value="player-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="580" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fb_mon" value="monster-service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="870" y="580" width="160" height="35" as="geometry" />
+        </mxCell>
+        <!-- B1: POST /fight/start -->
+        <mxCell id="fb1" value="POST /fight/start" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#333333;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="650" as="sourcePoint" />
+            <mxPoint x="210" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb1r" value="202 ACCEPTED" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=open;strokeColor=#333333;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="665" as="sourcePoint" />
+            <mxPoint x="95" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb1n" value="1. Create CombatHistory(PENDING_STAMINA)" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="640" width="230" height="30" as="geometry" />
+        </mxCell>
+        <!-- B2: fight → stamina (Kafka) -->
+        <mxCell id="fb2" value="[Kafka] stamina.consume-requests" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#b85450;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="700" as="sourcePoint" />
+            <mxPoint x="430" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb2n" value="2. Emit StaminaConsumeRequest(10, &quot;FIGHT&quot;)" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="690" width="210" height="30" as="geometry" />
+        </mxCell>
+        <!-- B3: stamina → fight (Kafka) -->
+        <mxCell id="fb3" value="[Kafka] stamina.consume-results" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#6c8ebf;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="750" as="sourcePoint" />
+            <mxPoint x="370" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb3n" value="3. Deduct 10 stamina" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="435" y="740" width="180" height="30" as="geometry" />
+        </mxCell>
+        <!-- B4: fight → player (sync REST) -->
+        <mxCell id="fb4" value="GET /players/{opp}/team (sync REST)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="800" as="sourcePoint" />
+            <mxPoint x="650" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb4n" value="4. Update CombatHistory(PROCESSING)" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="790" width="210" height="30" as="geometry" />
+        </mxCell>
+        <!-- B5: fight → monster (sync REST) -->
+        <mxCell id="fb5" value="POST /monsters/batch (sync REST)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="850" as="sourcePoint" />
+            <mxPoint x="870" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb5n" value="5. Fetch both teams&#39; monster stats" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="840" width="210" height="30" as="geometry" />
+        </mxCell>
+        <!-- B6: fight → Kafka fights.ended -->
+        <mxCell id="fb6" value="[Kafka] fights.ended → player + monster" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#b85450;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="905" as="sourcePoint" />
+            <mxPoint x="870" y="905" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb6n" value="6. Run BattleEngine(seed) · COMPLETED" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="215" y="895" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fb6np" value="Award XP · level up player" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="655" y="895" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fb6nm" value="Award XP · level up monsters" style="text;html=1;strokeColor=none;fillColor=#ffe6cc;align=left;fontSize=9;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="875" y="895" width="160" height="30" as="geometry" />
+        </mxCell>
+        <!-- B7: poll -->
+        <mxCell id="fb7" value="GET /fight/{id} (poll until COMPLETED/FAILED)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=9;endArrow=block;endFill=1;strokeColor=#333333;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="960" as="sourcePoint" />
+            <mxPoint x="210" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
