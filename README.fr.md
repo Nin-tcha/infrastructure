@@ -22,6 +22,8 @@ Six services backend, chacun avec sa propre base de données. La communication i
 ## Démarrage rapide
 
 ```bash
+git submodule update --init --recursive   # Initialiser les submodules après un clone
+
 make build      # Compiler tous les services Java (obligatoire en premier)
 make infra-up   # Démarrer PostgreSQL, Kafka, Kafka UI
 make start      # Démarrer tous les services dans tmux

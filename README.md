@@ -22,6 +22,8 @@ Six backend services, each with its own database. Inter-service communication go
 ## Quick Start
 
 ```bash
+git submodule update --init --recursive   # Init submodules after a fresh clone
+
 make build      # Build all Java services (required first)
 make infra-up   # Start PostgreSQL, Kafka, Kafka UI
 make start      # Start all services in tmux
