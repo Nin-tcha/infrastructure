@@ -28,62 +28,17 @@ dev-fight:
 dev-stamina:
 	cd services/stamina-service && mvn quarkus:dev -Dquarkus.http.port=8086 -Ddebug=5010
 
-SESSION := gatcha-dev
-
 start:
-	@echo "Démarrage de l'environnement Gatcha dans tmux..."
-
-	tmux new-session -d -s $(SESSION) -n 'Infra'
-	tmux send-keys -t $(SESSION):Infra 'make infra-up' C-m
-
-	tmux new-window -t $(SESSION) -n 'Runners'
-
-	tmux send-keys -t $(SESSION):Runners 'cd services/auth-service && mvn quarkus:dev' C-m
-
-	tmux split-window -h -t $(SESSION):Runners
-	tmux send-keys -t $(SESSION):Runners 'cd services/player-service && mvn quarkus:dev' C-m
-
-	tmux split-window -h -t $(SESSION):Runners
-	tmux send-keys -t $(SESSION):Runners 'cd services/monster-service && mvn quarkus:dev' C-m
-
-	tmux split-window -v -t $(SESSION):Runners
-	tmux send-keys -t $(SESSION):Runners 'cd services/invocation-service && mvn quarkus:dev' C-m
-
-	tmux split-window -h -t $(SESSION):Runners
-	tmux send-keys -t $(SESSION):Runners 'cd services/fight-service && mvn quarkus:dev' C-m
-
-	tmux split-window -v -t $(SESSION):Runners
-	tmux send-keys -t $(SESSION):Runners 'cd services/stamina-service && mvn quarkus:dev' C-m
-
-	tmux select-layout -t $(SESSION):Runners tiled
-
-	tmux new-window -t $(SESSION) -n 'Terminals'
-
-	tmux send-keys -t $(SESSION):Terminals 'cd services/auth-service' C-m
-
-	tmux split-window -h -t $(SESSION):Terminals
-	tmux send-keys -t $(SESSION):Terminals 'cd services/player-service' C-m
-
-	tmux split-window -h -t $(SESSION):Terminals
-	tmux send-keys -t $(SESSION):Terminals 'cd services/monster-service' C-m
-
-	tmux split-window -v -t $(SESSION):Terminals
-	tmux send-keys -t $(SESSION):Terminals 'cd services/invocation-service' C-m
-
-	tmux split-window -h -t $(SESSION):Terminals
-	tmux send-keys -t $(SESSION):Terminals 'cd services/fight-service' C-m
-
-	tmux split-window -v -t $(SESSION):Terminals
-	tmux send-keys -t $(SESSION):Terminals 'cd services/stamina-service' C-m
-
-	tmux select-layout -t $(SESSION):Terminals tiled
-
-	tmux select-window -t $(SESSION):Runners
-	tmux attach-session -t $(SESSION)
+	@echo "Lance chaque commande dans un terminal séparé :"
+	@echo ""
+	@echo "  make dev-auth"
+	@echo "  make dev-player"
+	@echo "  make dev-monster"
+	@echo "  make dev-invoc"
+	@echo "  make dev-fight"
+	@echo "  make dev-stamina"
 
 stop:
-	@echo "Arrêt de l'environnement..."
-	-tmux kill-session -t $(SESSION) 2>/dev/null
 	make infra-down
 
 test:

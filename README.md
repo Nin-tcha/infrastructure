@@ -26,24 +26,25 @@ git submodule update --init --recursive   # Init submodules after a fresh clone
 
 make build      # Build all Java services (required first)
 make infra-up   # Start PostgreSQL, Kafka, Kafka UI
-make start      # Start all services in tmux
+```
 
+Then run each service in a separate terminal (hot reload):
+
+```bash
+make dev-auth      # :8081
+make dev-player    # :8082
+make dev-monster   # :8083
+make dev-invoc     # :8084
+make dev-fight     # :8085
+make dev-stamina   # :8086
+```
+
+```bash
 cd nintcha-front && npm install && npm run dev   # Frontend on :3000
 ```
 
-Individual services (hot reload):
-
 ```bash
-make dev-auth
-make dev-player
-make dev-monster
-make dev-invoc
-make dev-fight
-make dev-stamina
-```
-
-```bash
-make stop        # Kill tmux session + bring down infra
+make stop        # Bring down infra
 ```
 
 ## Testing
