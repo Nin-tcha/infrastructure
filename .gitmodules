@@ -29,3 +29,6 @@
 	path = cdn
 	url = git@github.com:Nin-tcha/cdn.git
 	branch = main
+[submodule "gacha_sql_generator_project"]
+	path = gacha_sql_generator_project
+	url = git@github.com:Nin-tcha/sql-generator.git
