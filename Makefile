@@ -49,10 +49,10 @@ test-integration:
 
 test-e2e:
 	@echo "Démarrage tests E2E"
-	docker compose -f docker-compose.e2e.yaml up --build -d --remove-orphans
+	docker compose -f docker-compose.full.yaml up --build -d --remove-orphans
 	@sleep 30
 	cd services/e2e-tests && mvn test -Dtest=InvocationFlowE2ETest || (make docker-all-down && exit 1)
-	docker compose -f docker-compose.e2e.yaml down
+	docker compose -f docker-compose.full.yaml down
 	@echo "Tests E2E terminés !"
 
 # si environnement déjà lancé
@@ -60,13 +60,13 @@ test-e2e-only:
 	cd services/e2e-tests && mvn test -Dtest=InvocationFlowE2ETest
 
 docker-all:
-	docker compose -f docker-compose.e2e.yaml up --build
+	docker compose -f docker-compose.full.yaml up --build
 
 docker-all-detached:
-	docker compose -f docker-compose.e2e.yaml up --build -d
+	docker compose -f docker-compose.full.yaml up --build -d
 
 docker-all-down:
-	docker compose -f docker-compose.e2e.yaml down
+	docker compose -f docker-compose.full.yaml down
 
 docker-all-logs:
-	docker compose -f docker-compose.e2e.yaml logs -f
+	docker compose -f docker-compose.full.yaml logs -f
