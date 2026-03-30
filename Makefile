@@ -1,5 +1,22 @@
+DIST_NAME = nintcha-$(shell date +%Y%m%d)
+
 build:
 	mvn clean install -DskipTests
+
+clean:
+	mvn clean
+	rm -rf nintcha-front/.next nintcha-front/node_modules
+
+zip:
+	@TMP=$$(mktemp -d) && \
+	DIST="$$TMP/$(DIST_NAME)" && \
+	mkdir -p "$$DIST" && \
+	git archive HEAD | tar -x -C "$$DIST" && \
+	ARCHIVE_DIR="$$DIST" git submodule foreach --quiet --recursive \
+		'mkdir -p "$$ARCHIVE_DIR/$$displaypath" && git archive HEAD | tar -x -C "$$ARCHIVE_DIR/$$displaypath"' && \
+	cd "$$TMP" && zip -r "$(CURDIR)/$(DIST_NAME).zip" "$(DIST_NAME)" && \
+	rm -rf "$$TMP" && \
+	echo "Créé : $(DIST_NAME).zip"
 
 infra-up:
 	docker compose up -d postgres kafka kafka-ui
@@ -66,7 +83,7 @@ docker-all-detached:
 	docker compose -f docker-compose.full.yaml up --build -d
 
 docker-all-down:
-	docker compose -f docker-compose.full.yaml down
+	docker compose -f docker-compose.full.yaml down -v
 
 docker-all-logs:
 	docker compose -f docker-compose.full.yaml logs -f
